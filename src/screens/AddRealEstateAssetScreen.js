@@ -1,6 +1,7 @@
 /**
- * Add Location Screen
- * Allows users to add a new location for grouping properties
+ * Add Real Estate Asset Screen
+ * Allows users to add a new real estate asset
+ * Following domain guidelines: uses RealEstateAsset instead of ambiguous "Location" or "Property"
  */
 
 import React, {useState} from 'react';
@@ -17,15 +18,15 @@ import {
 } from 'react-native';
 import {MaterialIcons as Icon} from '@react-native-vector-icons/material-icons';
 import {
-  createLocation,
-  LocationTypes,
-  LocationTypeIcons,
-  LocationTypeLabels,
-} from '../models/Location';
+  createRealEstateAsset,
+  AssetTypes,
+  AssetTypeIcons,
+  AssetTypeLabels,
+} from '../models/RealEstateAsset';
 
-const AddLocationScreen = ({navigation}) => {
+const AddRealEstateAssetScreen = ({navigation}) => {
   const [name, setName] = useState('');
-  const [selectedType, setSelectedType] = useState(LocationTypes.APARTMENT_BUILDING);
+  const [selectedType, setSelectedType] = useState(AssetTypes.APARTMENT_BUILDING);
   const [street, setStreet] = useState('');
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
@@ -36,7 +37,7 @@ const AddLocationScreen = ({navigation}) => {
 
   const handleSave = () => {
     if (!name.trim()) {
-      Alert.alert('Validation Error', 'Please enter a location name.');
+      Alert.alert('Validation Error', 'Please enter an asset name.');
       return;
     }
 
@@ -45,9 +46,9 @@ const AddLocationScreen = ({navigation}) => {
       return;
     }
 
-    const newLocation = createLocation({
+    const newAsset = createRealEstateAsset({
       name: name.trim(),
-      type: selectedType,
+      assetType: selectedType,
       address: {
         street: street.trim(),
         city: city.trim(),
@@ -63,7 +64,7 @@ const AddLocationScreen = ({navigation}) => {
     // In a real app, this would save to a database
     Alert.alert(
       'Success',
-      `Location "${newLocation.name}" has been created!`,
+      `Real Estate Asset "${newAsset.name}" has been created!`,
       [
         {
           text: 'OK',
@@ -77,7 +78,7 @@ const AddLocationScreen = ({navigation}) => {
     navigation.goBack();
   };
 
-  const renderLocationTypeButton = (type) => {
+  const renderAssetTypeButton = (type) => {
     const isSelected = selectedType === type;
     return (
       <TouchableOpacity
@@ -88,7 +89,7 @@ const AddLocationScreen = ({navigation}) => {
         ]}
         onPress={() => setSelectedType(type)}>
         <Icon
-          name={LocationTypeIcons[type]}
+          name={AssetTypeIcons[type]}
           size={32}
           color={isSelected ? '#3498db' : '#7f8c8d'}
         />
@@ -97,7 +98,7 @@ const AddLocationScreen = ({navigation}) => {
             styles.typeLabel,
             isSelected && styles.typeLabelSelected,
           ]}>
-          {LocationTypeLabels[type]}
+          {AssetTypeLabels[type]}
         </Text>
       </TouchableOpacity>
     );
@@ -112,7 +113,7 @@ const AddLocationScreen = ({navigation}) => {
         <TouchableOpacity onPress={handleCancel} style={styles.headerButton}>
           <Icon name="arrow-back" size={24} color="#2c3e50" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Add Location</Text>
+        <Text style={styles.headerTitle}>Add Real Estate Asset</Text>
         <TouchableOpacity onPress={handleSave} style={styles.headerButton}>
           <Icon name="check" size={24} color="#27ae60" />
         </TouchableOpacity>
@@ -120,9 +121,9 @@ const AddLocationScreen = ({navigation}) => {
 
       <ScrollView style={styles.scrollView}>
         <View style={styles.content}>
-          {/* Location Name */}
+          {/* Asset Name */}
           <View style={styles.section}>
-            <Text style={styles.label}>Location Name *</Text>
+            <Text style={styles.label}>Asset Name *</Text>
             <TextInput
               style={styles.input}
               placeholder="e.g., Sunset Apartments"
@@ -132,12 +133,12 @@ const AddLocationScreen = ({navigation}) => {
             />
           </View>
 
-          {/* Location Type */}
+          {/* Asset Type */}
           <View style={styles.section}>
-            <Text style={styles.label}>Location Type</Text>
+            <Text style={styles.label}>Asset Type</Text>
             <View style={styles.typeContainer}>
-              {Object.values(LocationTypes).map(type =>
-                renderLocationTypeButton(type),
+              {Object.values(AssetTypes).map(type =>
+                renderAssetTypeButton(type),
               )}
             </View>
           </View>
@@ -206,7 +207,7 @@ const AddLocationScreen = ({navigation}) => {
             <Text style={styles.label}>Description</Text>
             <TextInput
               style={[styles.input, styles.textArea]}
-              placeholder="Brief description of the location..."
+              placeholder="Brief description of the asset..."
               value={description}
               onChangeText={setDescription}
               multiline
@@ -329,4 +330,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AddLocationScreen;
+export default AddRealEstateAssetScreen;
