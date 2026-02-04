@@ -179,7 +179,7 @@ npm test          # Run tests
 ## Golden Rules
 
 1. **Never** use `Property` as an entity name
-2. **Always** use explicit domain names (`RentalUnit`, not `Unit`)
+2. **Always** use explicit domain names (`RentalUnit` over `Unit` when ambiguity exists)
 3. **Always** use functional components with hooks
 4. **Always** use StyleSheet for styling
 5. **Always** scope identifiers (`unitId`, not `id`)
