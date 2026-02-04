@@ -1,0 +1,7 @@
+{
+  "name": "JBAssetManager",
+  "displayName": "JB Asset Manager",
+  "ios": {
+    "bundleIdentifier": "com.jbassetmanager"
+  }
+}
