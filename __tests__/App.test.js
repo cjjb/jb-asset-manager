@@ -1,5 +1,6 @@
 /**
- * @format
+ * App Test Suite
+ * Tests for main application components including GuestWelcome and AddLocationScreen
  */
 
 import 'react-native';

@@ -1,5 +1,7 @@
-// Mock react-native-vector-icons
-jest.mock('react-native-vector-icons/MaterialIcons', () => 'Icon');
+// Mock @react-native-vector-icons/material-icons
+jest.mock('@react-native-vector-icons/material-icons', () => ({
+  MaterialIcons: 'Icon',
+}));
 
 // Mock native modules
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
