@@ -7,7 +7,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import GuestWelcome from './src/components/GuestWelcome';
-import AddLocationScreen from './src/screens/AddLocationScreen';
+import AddRealEstateAssetScreen from './src/screens/AddRealEstateAssetScreen';
 
 const Stack = createStackNavigator();
 
@@ -20,7 +20,7 @@ const App = () => {
           headerShown: false,
         }}>
         <Stack.Screen name="Welcome" component={GuestWelcome} />
-        <Stack.Screen name="AddLocation" component={AddLocationScreen} />
+        <Stack.Screen name="AddRealEstateAsset" component={AddRealEstateAssetScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
