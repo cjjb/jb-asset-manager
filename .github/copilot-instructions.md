@@ -10,7 +10,7 @@ JB Asset Manager is a cross-platform mobile application built with React Native 
 - **Language**: JavaScript (ES6+)
 - **Navigation**: React Navigation v7 (Stack Navigator)
 - **UI Components**: React Native core components
-- **Icons**: react-native-vector-icons (MaterialIcons)
+- **Icons**: @react-native-vector-icons/material-icons
 - **Testing**: Jest with React Native preset
 - **Package Manager**: npm
 - **Supported Platforms**: iOS and Android
@@ -108,7 +108,7 @@ jb-asset-manager/
 - Use React Native components (View, Text, TouchableOpacity) instead of HTML elements
 - Use StyleSheet for styling instead of CSS
 - SafeAreaView is used for proper layout on modern devices
-- Vector icons are from 'react-native-vector-icons/MaterialIcons'
+- Vector icons are from '@react-native-vector-icons/material-icons'
 - Navigation is handled by React Navigation, not React Router
 - The app targets Node.js >= 18
 
@@ -148,7 +148,7 @@ jb-asset-manager/
 
 3. **Icon Usage**:
    ```javascript
-   import Icon from 'react-native-vector-icons/MaterialIcons';
+   import {MaterialIcons as Icon} from '@react-native-vector-icons/material-icons';
    <Icon name="icon-name" size={24} color="#000" />
    ```
 

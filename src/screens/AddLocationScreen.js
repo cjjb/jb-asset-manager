@@ -15,7 +15,7 @@ import {
   StatusBar,
   Alert,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import {MaterialIcons as Icon} from '@react-native-vector-icons/material-icons';
 import {
   createLocation,
   LocationTypes,

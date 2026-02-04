@@ -13,7 +13,7 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import {MaterialIcons as Icon} from '@react-native-vector-icons/material-icons';
 
 const GuestWelcome = ({navigation}) => {
   return (
