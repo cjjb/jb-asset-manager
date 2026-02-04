@@ -3,6 +3,8 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
 android {
     namespace = "com.jbassetmanager"
     compileSdk = 34

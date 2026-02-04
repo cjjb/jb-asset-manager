@@ -11,9 +11,11 @@ import {
   View,
   StatusBar,
   Image,
+  TouchableOpacity,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
-const GuestWelcome = () => {
+const GuestWelcome = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
@@ -30,6 +32,16 @@ const GuestWelcome = () => {
             Keep track of your properties, schedule maintenance, monitor costs,
             and manage income all in one place.
           </Text>
+        </View>
+        
+        {/* Action Buttons */}
+        <View style={styles.actionsContainer}>
+          <TouchableOpacity
+            style={styles.primaryButton}
+            onPress={() => navigation.navigate('AddLocation')}>
+            <Icon name="add-location" size={24} color="#ffffff" />
+            <Text style={styles.buttonText}>Add Location</Text>
+          </TouchableOpacity>
         </View>
       </View>
       <View style={styles.footer}>
@@ -91,6 +103,25 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#95a5a6',
     textAlign: 'center',
+  },
+  actionsContainer: {
+    marginTop: 30,
+    width: '100%',
+  },
+  primaryButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#3498db',
+    paddingVertical: 16,
+    paddingHorizontal: 24,
+    borderRadius: 12,
+    gap: 8,
+  },
+  buttonText: {
+    color: '#ffffff',
+    fontSize: 16,
+    fontWeight: '600',
   },
 });
 
