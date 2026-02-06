@@ -8,6 +8,55 @@ This document defines the iterative development plan for JB Asset Manager. Issue
 
 ---
 
+## Status Tracking
+
+> **IMPORTANT — Keep This Plan Updated**: Every agent or developer working on issues from this plan **must** update this file to reflect the current status of each issue. Update the status after every step in the lifecycle. This ensures all contributors (human or agent) have an accurate view of progress.
+
+### Status Legend
+
+| Status | Meaning |
+|--------|---------|
+| _(no status)_ | Not yet started, no GitHub issue created |
+| 📋 `Issue Created` | GitHub issue has been created; work has not started |
+| 🔧 `In Progress` | Work is actively being done on this issue |
+| 🔍 `In Review` | A pull request has been submitted and is under review |
+| ✅ `Done` | Issue is completed, PR merged, and all acceptance criteria met |
+| ⏸️ `Blocked` | Work is blocked by a dependency or external factor |
+
+### How to Update
+
+1. **When a GitHub issue is created**: Add the GitHub issue number and set the status to `📋 Issue Created` next to the issue heading (e.g., `### Issue 1: ... — 📋 Issue Created (GitHub Issue #N)`).
+2. **When work begins**: Update the status to `🔧 In Progress`.
+3. **When a PR is submitted**: Update the status to `🔍 In Review`.
+4. **When the PR is merged and the issue is closed**: Update the status to `✅ Done`.
+5. **If work is blocked**: Update the status to `⏸️ Blocked` and add a note explaining the blocker.
+
+### Current Issue Status Summary
+
+| Issue | Title | Status |
+|-------|-------|--------|
+| 1 | Add Data Persistence with AsyncStorage | 📋 Issue Created |
+| 2 | Asset List Screen | _(not started)_ |
+| 3 | Asset Detail Screen | _(not started)_ |
+| 4 | Edit Asset Screen | _(not started)_ |
+| 5 | Delete Asset Functionality | _(not started)_ |
+| 6 | MaintenanceRequest Model and Add Screen | _(not started)_ |
+| 7 | Maintenance Request List on Asset Detail | _(not started)_ |
+| 8 | RentalUnit Model and Add Screen | _(not started)_ |
+| 9 | RentalUnit List on Asset Detail | _(not started)_ |
+| 10 | Tenant Model and Basic Management | _(not started)_ |
+| 11 | LeaseAgreement Model and Creation | _(not started)_ |
+| 12 | Update MaintenanceRequest Status | _(not started)_ |
+| 13 | Dashboard / Home Screen with Summary | _(not started)_ |
+| 14 | RentCharge and Invoice Models | _(not started)_ |
+| 15 | Payment Tracking | _(not started)_ |
+| 16 | Financial Summary Views | _(not started)_ |
+| 17 | Search and Filter Assets | _(not started)_ |
+| 18 | WorkOrder Management | _(not started)_ |
+| 19 | ServiceProvider Directory | _(not started)_ |
+
+---
+
 ## Current State
 
 - ✅ Welcome screen (`GuestWelcome.js`)
@@ -30,7 +79,7 @@ This document defines the iterative development plan for JB Asset Manager. Issue
 
 ---
 
-### Issue 1: Add Data Persistence with AsyncStorage
+### Issue 1: Add Data Persistence with AsyncStorage — 📋 Issue Created
 
 **Priority**: P0 — Blocker for all other features
 
@@ -414,3 +463,4 @@ After completing Issues 1–7, the POC supports:
 6. **Use scoped identifiers** — `assetId`, `unitId`, `requestId`, `leaseId`, never `id`.
 7. **Storage services** should follow the pattern established in Issue 1 (`AssetStorageService`).
 8. **Phase 1 (Issues 1–7) is the POC.** Stop after Phase 1 for user feedback before starting Phase 2.
+9. **Update this file** after every status change. When you start working on an issue, change its status in the "Current Issue Status Summary" table and in the issue heading. When you open a PR, update again. When the PR is merged, update again. This keeps all agents and humans in sync.
