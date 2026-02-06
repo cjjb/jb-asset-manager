@@ -362,7 +362,7 @@ After completing Issues 1–7, the POC supports:
 - [ ] Monthly income summary (total rent collected)
 - [ ] Outstanding rent balances
 - [ ] Maintenance expense totals
-- [ ] Net income calculation (rent collected − maintenance costs)
+- [ ] Net income calculation (rent collected - maintenance costs)
 - [ ] Unit tests
 
 ---
