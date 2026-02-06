@@ -24,7 +24,7 @@ Since this is a headless environment without an emulator, here's a detailed desc
 │  └───────────────────────────────┘ │
 │                                     │
 │  ┌───────────────────────────────┐ │
-│  │  📍 Add Location              │ │
+│  │  📍 Add Real Estate Asset      │ │
 │  │  (Blue button with icon)      │ │
 │  └───────────────────────────────┘ │
 │                                     │
@@ -39,23 +39,23 @@ Since this is a headless environment without an emulator, here's a detailed desc
 - Bold title: "Welcome to JB Asset Manager"
 - Subtitle in gray
 - Description box with light gray background
-- Primary action button in blue with location icon
+- Primary action button in blue with pin icon
 
 ---
 
-## 2. Add Location Screen (AddLocationScreen.js)
+## 2. Add Real Estate Asset Screen (AddRealEstateAssetScreen.js)
 
 ```
 ┌─────────────────────────────────────┐
-│ ←  Add Location              ✓     │ <- Header with back & save
+│ ←  Add Real Estate Asset      ✓     │ <- Header with back & save
 ├─────────────────────────────────────┤
 │                                     │
-│ Location Name *                     │
+│ Asset Name *                        │
 │ ┌─────────────────────────────────┐ │
 │ │ e.g., Sunset Apartments         │ │
 │ └─────────────────────────────────┘ │
 │                                     │
-│ Location Type                       │
+│ Asset Type                          │
 │ ┌────┐ ┌────┐ ┌────┐ ┌────┐ ┌────┐│
 │ │🏢 │ │🏢 │ │🏖️ │ │🏠 │ │🌲 ││
 │ │Apt │ │Condo│Beach│Town│Ctry││
@@ -103,10 +103,10 @@ Since this is a headless environment without an emulator, here's a detailed desc
 **Visual Elements:**
 - **Header Bar**: 
   - Back arrow (←) on left
-  - "Add Location" title in center
+  - "Add Real Estate Asset" title in center
   - Checkmark (✓) save button on right in green
-- **Location Name Field**: Text input with light gray background
-- **Location Type Selector**: 5 buttons in a row
+- **Asset Name Field**: Text input with light gray background
+- **Asset Type Selector**: 5 buttons in a row
   - Each with an icon and label
   - Selected type has blue border and background
   - Icons: apartment, domain, beach-access, home, nature-people
@@ -126,10 +126,10 @@ Since this is a headless environment without an emulator, here's a detailed desc
 - Success Green: #27ae60 (save button)
 
 **Interaction Flow:**
-1. User taps "Add Location" on Welcome screen
+1. User taps "Add Real Estate Asset" on Welcome screen
 2. Screen slides in from right
-3. User fills in location details
-4. User selects location type by tapping icon buttons
+3. User fills in asset details
+4. User selects asset type by tapping icon buttons
 5. User taps checkmark to save
 6. Alert shows success message
 7. Screen returns to Welcome screen

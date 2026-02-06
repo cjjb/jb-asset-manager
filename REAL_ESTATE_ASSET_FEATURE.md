@@ -1,19 +1,19 @@
-# Location Management Feature
+# Real Estate Asset Management Feature
 
 ## Overview
-This feature allows users to add locations for grouping properties in the JB Asset Manager app.
+This feature allows users to add real estate assets for managing rental properties in the JB Asset Manager app.
 
 ## What Was Implemented
 
-### 1. Location Data Model (`src/models/Location.js`)
-- Defines location types: Apartment Building, Condo, Beach House, Town House, Country House
-- Maps location types to Material Icons
-- Provides a factory function to create location objects with proper structure
+### 1. RealEstateAsset Data Model (`src/models/RealEstateAsset.js`)
+- Defines asset types: Apartment Building, Condo, Beach House, Town House, Country House
+- Maps asset types to Material Icons
+- Provides a factory function to create real estate asset objects with proper structure
 
-### 2. Add Location Screen (`src/screens/AddLocationScreen.js`)
-A comprehensive form that allows users to add locations with:
-- **Location Name**: Required field for the location name
-- **Location Type**: Visual selector with icons for different property types
+### 2. Add Real Estate Asset Screen (`src/screens/AddRealEstateAssetScreen.js`)
+A comprehensive form that allows users to add real estate assets with:
+- **Asset Name**: Required field for the asset name
+- **Asset Type**: Visual selector with icons for different asset types
 - **Address Fields**: 
   - Street Address (required)
   - City (required)
@@ -27,10 +27,10 @@ A comprehensive form that allows users to add locations with:
 ### 3. Navigation Setup
 - Integrated React Navigation for screen navigation
 - Stack Navigator to handle screen transitions
-- Updated Welcome screen with "Add Location" button
+- Updated Welcome screen with "Add Real Estate Asset" button
 
 ### 4. Updated Welcome Screen (`src/components/GuestWelcome.js`)
-- Added navigation button to access the Add Location screen
+- Added navigation button to access the Add Real Estate Asset screen
 - Uses Material Icons for consistent visual design
 
 ## Dependencies Added
@@ -43,8 +43,8 @@ A comprehensive form that allows users to add locations with:
 
 ## Design Decisions
 
-### Location Types
-Chose five common property types that cover most real estate scenarios:
+### Asset Types
+Chose five common asset types that cover most real estate scenarios:
 - Apartment Building: Multi-unit residential buildings
 - Condo: Condominium units
 - Beach House: Coastal properties
@@ -53,16 +53,16 @@ Chose five common property types that cover most real estate scenarios:
 
 ### UI/UX Choices
 1. **Simple, Clean Design**: Followed existing app patterns with minimal, clean interface
-2. **Visual Type Selection**: Icons make it easy to identify location types
+2. **Visual Type Selection**: Icons make it easy to identify asset types
 3. **Validation**: Basic validation ensures name and core address fields are filled
 4. **Flexible Address**: Not all countries use the same address format, so most fields are optional except street and city
 5. **Additional Fields**: Description and notes provide flexibility for extra information
 
 ### Form Fields
 Based on common real estate application patterns:
-- Name and address are essential for location identification
-- Type helps categorize and filter locations
-- Description and notes provide context for property managers
+- Name and address are essential for asset identification
+- Type helps categorize and filter real estate assets
+- Description and notes provide context for asset managers
 
 ## Testing
 - Unit tests for both screens using React Test Renderer
@@ -71,11 +71,11 @@ Based on common real estate application patterns:
 
 ## Future Enhancements
 Potential improvements for future iterations:
-1. Persist locations to a database (AsyncStorage, SQLite, or cloud backend)
-2. List view to see all saved locations
+1. Persist real estate assets to a database (AsyncStorage, SQLite, or cloud backend)
+2. List view to see all saved assets
 3. Edit and delete functionality
-4. Search and filter locations
-5. Associate properties with locations
-6. Image uploads for location photos
-7. Map integration for location visualization
+4. Search and filter assets
+5. Associate rental units with assets
+6. Image uploads for asset photos
+7. Map integration for asset visualization
 8. Multi-language support for international users
