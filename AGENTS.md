@@ -8,6 +8,7 @@ This document provides essential guidelines for AI agents, GitHub Copilot, and d
 
 - **Technology Guidelines**: See [.github/copilot-instructions.md](.github/copilot-instructions.md)
 - **Domain Modeling Standards**: See [docs/agents/AGENTS_DOMAIN.md](docs/agents/AGENTS_DOMAIN.md)
+- **Development Plan**: See [docs/DEVELOPMENT_PLAN.md](docs/DEVELOPMENT_PLAN.md)
 
 ---
 
@@ -174,6 +175,9 @@ npm test          # Run tests
 ### "I'm confused about entity naming"
 → Remember: If it could be confused with a programming concept, it's invalid
 
+### "I need to know what to build next"
+→ Read [docs/DEVELOPMENT_PLAN.md](docs/DEVELOPMENT_PLAN.md)
+
 ---
 
 ## Golden Rules
@@ -194,5 +198,6 @@ This guide provides a quick reference for the most important practices. For deta
 
 - **For React Native development, coding standards, and technical patterns**: See [.github/copilot-instructions.md](.github/copilot-instructions.md)
 - **For domain modeling, entity naming, and business logic**: See [docs/agents/AGENTS_DOMAIN.md](docs/agents/AGENTS_DOMAIN.md)
+- **For the development roadmap and issue backlog**: See [docs/DEVELOPMENT_PLAN.md](docs/DEVELOPMENT_PLAN.md)
 
 When in doubt, prioritize domain clarity over code brevity, and always use explicit, unambiguous names.
