@@ -39,7 +39,7 @@ const GuestWelcome = ({navigation}) => {
           <TouchableOpacity
             style={styles.primaryButton}
             onPress={() => navigation.navigate('AssetList')}>
-            <Icon name="view-list" size={24} color="#ffffff" />
+            <Icon name="list" size={24} color="#ffffff" />
             <Text style={styles.buttonText}>View My Assets</Text>
           </TouchableOpacity>
         </View>
