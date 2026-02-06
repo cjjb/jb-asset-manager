@@ -268,10 +268,10 @@ const styles = StyleSheet.create({
   headerActions: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
   },
   headerButton: {
     padding: 4,
+    marginLeft: 12,
   },
   loadingContainer: {
     flex: 1,
