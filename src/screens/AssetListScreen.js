@@ -59,9 +59,8 @@ const AssetListScreen = ({navigation}) => {
   };
 
   const handleAssetPress = (asset) => {
-    // Placeholder for Issue 3 - Navigate to AssetDetail
-    console.log('Asset pressed:', asset.assetId);
-    // navigation.navigate('AssetDetail', {assetId: asset.assetId});
+    // Navigate to AssetDetail screen (Issue 3)
+    navigation.navigate('AssetDetail', {assetId: asset.assetId});
   };
 
   const renderEmptyState = () => (

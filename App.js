@@ -9,6 +9,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import GuestWelcome from './src/components/GuestWelcome';
 import AssetListScreen from './src/screens/AssetListScreen';
 import AddRealEstateAssetScreen from './src/screens/AddRealEstateAssetScreen';
+import AssetDetailScreen from './src/screens/AssetDetailScreen';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,7 @@ const App = () => {
         <Stack.Screen name="Welcome" component={GuestWelcome} />
         <Stack.Screen name="AssetList" component={AssetListScreen} />
         <Stack.Screen name="AddRealEstateAsset" component={AddRealEstateAssetScreen} />
+        <Stack.Screen name="AssetDetail" component={AssetDetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
