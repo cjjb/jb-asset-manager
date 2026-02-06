@@ -38,9 +38,9 @@ const GuestWelcome = ({navigation}) => {
         <View style={styles.actionsContainer}>
           <TouchableOpacity
             style={styles.primaryButton}
-            onPress={() => navigation.navigate('AddRealEstateAsset')}>
-            <Icon name="add-location" size={24} color="#ffffff" />
-            <Text style={styles.buttonText}>Add Real Estate Asset</Text>
+            onPress={() => navigation.navigate('AssetList')}>
+            <Icon name="list" size={24} color="#ffffff" />
+            <Text style={styles.buttonText}>View My Assets</Text>
           </TouchableOpacity>
         </View>
       </View>
