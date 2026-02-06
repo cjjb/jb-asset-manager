@@ -205,12 +205,12 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     paddingHorizontal: 24,
     borderRadius: 12,
-    gap: 8,
   },
   emptyButtonText: {
     color: '#ffffff',
     fontSize: 16,
     fontWeight: '600',
+    marginLeft: 8,
   },
   assetItem: {
     flexDirection: 'row',
