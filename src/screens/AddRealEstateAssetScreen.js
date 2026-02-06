@@ -23,6 +23,7 @@ import {
   AssetTypeIcons,
   AssetTypeLabels,
 } from '../models/RealEstateAsset';
+import {saveAsset} from '../services/AssetStorageService';
 
 const AddRealEstateAssetScreen = ({navigation}) => {
   const [name, setName] = useState('');
@@ -35,7 +36,7 @@ const AddRealEstateAssetScreen = ({navigation}) => {
   const [description, setDescription] = useState('');
   const [notes, setNotes] = useState('');
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (!name.trim()) {
       Alert.alert('Validation Error', 'Please enter an asset name.');
       return;
@@ -60,18 +61,25 @@ const AddRealEstateAssetScreen = ({navigation}) => {
       notes: notes.trim(),
     });
 
-    // For now, just show success message
-    // In a real app, this would save to a database
-    Alert.alert(
-      'Success',
-      `Real Estate Asset "${newAsset.name}" has been created!`,
-      [
-        {
-          text: 'OK',
-          onPress: () => navigation.goBack(),
-        },
-      ],
-    );
+    try {
+      await saveAsset(newAsset);
+      Alert.alert(
+        'Success',
+        `Real Estate Asset "${newAsset.name}" has been saved!`,
+        [
+          {
+            text: 'OK',
+            onPress: () => navigation.goBack(),
+          },
+        ],
+      );
+    } catch (error) {
+      Alert.alert(
+        'Error',
+        `Failed to save asset: ${error.message}`,
+        [{text: 'OK'}],
+      );
+    }
   };
 
   const handleCancel = () => {
