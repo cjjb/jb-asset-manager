@@ -15,7 +15,7 @@ This document provides essential guidelines for AI agents, GitHub Copilot, and d
 
 JB Asset Manager is a **React Native mobile application** for property management, built to help owners and managers:
 
-- Manage rental properties and locations
+- Manage rental real estate assets
 - Track maintenance schedules (scheduled and non-scheduled)
 - Monitor costs and income
 - Provide guest welcome interfaces
@@ -79,9 +79,9 @@ export default ComponentName;
 
 ### Naming Conventions
 
-- **Components**: PascalCase (`GuestWelcome`, `AddLocationScreen`)
+- **Components**: PascalCase (`GuestWelcome`, `AddRealEstateAssetScreen`)
 - **Files**: Match component name (`GuestWelcome.js`)
-- **Screens**: Use `Screen` suffix (`AddLocationScreen`)
+- **Screens**: Use `Screen` suffix (`AddRealEstateAssetScreen`)
 - **Styles**: camelCase (`container`, `primaryButton`)
 - **Domain IDs**: Scoped identifiers (`unitId`, `assetId`, `leaseId`)
 

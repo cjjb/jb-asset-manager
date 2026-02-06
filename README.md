@@ -53,11 +53,16 @@ npm start
 ```
 jb-asset-manager/
 ├── src/
-│   └── components/
-│       └── GuestWelcome.js    # Welcome page component
+│   ├── components/
+│   │   └── GuestWelcome.js    # Welcome page component
+│   ├── models/
+│   │   └── RealEstateAsset.js # Real estate asset data model
+│   └── screens/
+│       └── AddRealEstateAssetScreen.js  # Add asset form
 ├── android/                    # Android native code
 ├── ios/                        # iOS native code
-├── App.js                      # Main app component
+├── __tests__/                 # Test files
+├── App.js                      # Main app component with navigation
 ├── index.js                    # Entry point
 └── package.json               # Dependencies
 ```

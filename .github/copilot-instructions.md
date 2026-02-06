@@ -23,9 +23,9 @@ jb-asset-manager/
 │   ├── components/       # Reusable UI components
 │   │   └── GuestWelcome.js
 │   ├── models/          # Data models and schemas
-│   │   └── Location.js
+│   │   └── RealEstateAsset.js
 │   └── screens/         # Screen components
-│       └── AddLocationScreen.js
+│       └── AddRealEstateAssetScreen.js
 ├── android/             # Android native code
 ├── ios/                 # iOS native code
 ├── __tests__/          # Test files
@@ -61,10 +61,10 @@ jb-asset-manager/
    - Export components as default exports
 
 3. **Naming Conventions**:
-   - Components: PascalCase (e.g., `GuestWelcome`, `AddLocationScreen`)
+   - Components: PascalCase (e.g., `GuestWelcome`, `AddRealEstateAssetScreen`)
    - Files: Match component name (e.g., `GuestWelcome.js`)
    - Style names: camelCase (e.g., `container`, `primaryButton`)
-   - Screen components: Use `Screen` suffix (e.g., `AddLocationScreen`)
+   - Screen components: Use `Screen` suffix (e.g., `AddRealEstateAssetScreen`)
 
 4. **Styling**:
    - Use StyleSheet.create() for all styles
@@ -155,7 +155,7 @@ jb-asset-manager/
 ### Property Management Domain
 
 This app manages rental properties with these key features:
-- Property/location management
+- Real estate asset management
 - Maintenance tracking (scheduled and non-scheduled)
 - Cost and income monitoring
 - Guest welcome interface
